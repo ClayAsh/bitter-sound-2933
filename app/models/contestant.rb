@@ -5,7 +5,6 @@ class Contestant <ApplicationRecord
   validates_presence_of :name, :age, :hometown, :years_of_experience
 
   def current_projects 
-    # projects.pluck(:name)
     projects.order(:name)
   end
 
